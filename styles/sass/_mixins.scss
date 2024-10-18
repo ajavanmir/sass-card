@@ -1,0 +1,42 @@
+@mixin border($value,$side : "top"){
+    @if $side == "all"{
+        border: $value;
+    }@else{
+        border-#{$side}: $value;
+    }
+}
+@mixin mediaQuery($screen){
+    @media only screen and (min-width:$screen){
+        @content;
+    }
+}
+@mixin sideOffset($side,$type,$nums){
+    @if($side == 't'){
+        @if $type == "p"{
+            padding-top: calcVal($nums);
+        }@else{
+            margin-top: calcVal($nums);
+        }
+    }
+    @if($side == 'b'){
+        @if $type == "p"{
+            padding-bottom: calcVal($nums);
+        }@else{
+            margin-bottom: calcVal($nums);
+        }
+    }
+    @if($side == 'l'){
+        @if $type == "p"{
+            padding-left: calcVal($nums);
+        }@else{
+            margin-left: calcVal($nums);
+        }
+    }
+    @if($side == 'r'){
+        @if $type == "p"{
+            padding-right: calcVal($nums);
+        }@else{
+            margin-right: calcVal($nums);
+        }
+    }
+}

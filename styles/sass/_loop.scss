@@ -1,0 +1,19 @@
+$type : "p","m";
+@each $t in $type{
+    @for $nums from 0 to 11{        
+        .#{$t}-#{$nums}{
+            @if $t == "p"{
+                padding: calcVal($nums);                
+            }@else{
+                margin: calcVal($nums);
+            } 
+        }
+
+        $sides : 't','b','l','r';
+        @each $s in $sides{
+            .#{$t}#{$s}-#{$nums}{
+                @include sideOffset($s,$t,$nums);
+            }
+        }        
+    }    
+}

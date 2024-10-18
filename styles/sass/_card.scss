@@ -1,0 +1,33 @@
+%card-style{
+    padding: $card-spacer-y $card-spacer-x;
+    background-color: rgba(0, 0,0,.03);    
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: $white-color;
+    border: $card-border-width $card-border-type $card-border-color;
+    border-radius: $card-border-radius;
+    .card-header{
+        @extend %card-style;
+        @include border($card-border-width $card-border-type $card-border-color, "bottom");
+    }
+    .card-body{
+        padding: $card-spacer-y $card-spacer-x;
+        .card-title{
+            margin-bottom: $card-spacer-y;
+            font-size: $font-size-lg;
+            font-weight: $font-weight-bold;
+        }
+    }
+    .card-footer{
+        @extend %card-style;
+        border-top: $card-border-width $card-border-type $card-border-color;
+    }
+    @include mediaQuery($extra-mobile){
+        flex-direction: row;
+    }
+    @include mediaQuery($tablet){
+        flex-direction: column;
+    }
+}

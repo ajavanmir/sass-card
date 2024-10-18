@@ -1,0 +1,25 @@
+//global
+$font-family: "arial";
+$font-size-base: 1rem;
+$font-size-lg: $font-size-base + 0.5rem;
+$width-large:1200px;
+$white-color:#fff;
+$font-weight-normal:500;
+$font-weight-medium:600;
+$font-weight-bold:700;
+
+//card
+$card-border-width:1px;
+$card-border-color:rgba(0, 0,0,.125);
+$card-border-type:solid;
+$card-border-radius:0.25rem;
+$card-spacer-x:1.25rem;
+$card-spacer-y:0.75rem;
+
+//size responsive
+$mobile:0;
+$extra-mobile:576px;
+$tablet:768px;
+$desktop:992px;
+$desktop-large:1200px;
+$extra-large:1400px;
